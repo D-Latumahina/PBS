@@ -13,6 +13,9 @@ return new class extends Migration
     {
         Schema::create('inkomstens', function (Blueprint $table) {
             $table->id();
+            $table->string('price');
+            $table->string('description');
+            $table->string('category');
             $table->timestamps();
         });
     }

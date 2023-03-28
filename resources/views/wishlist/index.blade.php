@@ -23,6 +23,9 @@
     <br>
     <br>
     <br>
+    <br>
+    <br>
+    <br>
     <div class="container px-4 px-lg-5">
     <a href="/wishlist/create"><button class="btn btn-primary ">Item toevoegen</button></a>
     <br>
@@ -30,21 +33,23 @@
     <table class="table">
   <thead class="thead-dark">
     <tr>
-      <th scope="col">#</th>
+      <th scope="col"></th>
       <th scope="col">Product</th>
       <th scope="col">Beschrijving</th>
       <th scope="col">Prijs</th>
       <th scope="col">Url</th>
+      <th scope="col"></th>
     </tr>
-  </thead>
+    </thead>
   @foreach(auth()->user()->wishlists as $wishlist)
   <tbody>
     <tr>
-      <th scope="row">{{$wishlist->id}}</th>
+      <th scope="row"></th>
       <td>{{$wishlist->product}}</td>
       <td>{{$wishlist->description}}</td>
       <td>€{{$wishlist->price}}</td>
       <td><a href="{{$wishlist->url}}">{{$wishlist->url}}</a></td>
+      <td><a href = 'delete/{{ $wishlist->id }}'><button class="fas fa-trash"></button></a></td>
     </tr>
   </tbody>
   @endforeach

@@ -18,7 +18,7 @@
                     <ul class="navbar-nav ms-auto my-2 my-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#about">Inkomsten</a></li>
                         <li class="nav-item"><a class="nav-link" href="#services">Uitgaven</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Wishlist</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/wishlist">Wishlist</a></li>
                     </ul>
                     @endauth
                 </div>

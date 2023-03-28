@@ -34,3 +34,6 @@ Route::post('/logout', [MainController::class, 'logout'])->name('logout');
 Route::get('/wishlist', [WishlistController::class, 'index'])->name('wishlist.index');
 Route::get('/wishlist/create', [WishlistController::class, 'createForm'])->name('createForm');
 Route::post('/wishlist/create', [WishlistController::class, 'storeWishlist'])->name('storeWishlist');
+// Route::delete('/wishlist/{wishlist}', [WishlistController::class, 'delete'])->middleware('can:delete,wishlist');
+Route::delete('/wishlist/{id}', [WishlistController::class, 'destroy']);
+Route::get('delete/{id}',[WishlistController::class, 'destroy']);

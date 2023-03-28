@@ -5,15 +5,15 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use App\Models\Wishlist;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 
 class WishlistController extends Controller
 {
     public function index(){
         $users = User::get();
-
+        $price = Wishlist::all();
         $users = Wishlist::get();
-
 
         return view('wishlist.index');
     }
@@ -53,5 +53,13 @@ class WishlistController extends Controller
         return view('usersView', compact('user'));
     }
 
+    private function getSharedData(User $user) {
+        View::share('sharedData', ['priceCount' => $wishlist->price()->count()]);
+    }
 
+    public function destroy($id) {
+        DB::delete('delete from wishlists where id = ?',[$id]);
+
+        return redirect('/wishlist');
+    }
 }

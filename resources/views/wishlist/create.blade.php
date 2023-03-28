@@ -22,6 +22,11 @@
 <div class="container py-md-5 container--narrow">
 <form action="/wishlist/create" method="POST">
         @csrf
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
           <div class="form-group">
             <label for="wishlist-product" class="text-muted mb-1"><small>Product</small></label>
             <input value="{{old('product')}}" name="product" id="wishlist-product" class="form-control form-control-lg form-control-title" type="text" placeholder="" autocomplete="off" />
