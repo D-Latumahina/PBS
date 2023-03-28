@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Creative - Start Bootstrap Theme</title>
+        <title>Inkomsten / Uitgaven</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Bootstrap Icons-->
@@ -30,7 +30,7 @@
                     </div>
                     <div class="col-lg-8 align-self-baseline">
                         <p class="text-white-75 mb-5">Een applicatie gemaakt voor de inkomsten en uitgaven van Jonne en Dani</p>
-                        <a class="btn btn-primary btn-xl" href="/auth/login">Inloggen</a>
+                        <a class="btn btn-primary btn-xl" href="/login">Inloggen</a>
                     </div>
                 </div>
             </div>
