@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\WishlistController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +29,8 @@ Route::get('/auth/login', [MainController::class, 'showLogin'])->name('auth.logi
 Route::post('/auth/login', [MainController::class, 'login'])->name('auth.login');
 Route::get('/auth/register', [MainController::class, 'register'])->name('auth.register');
 Route::post('/logout', [MainController::class, 'logout'])->name('logout');
+
+// Wishlist Routes
+Route::get('/wishlist', [WishlistController::class, 'index'])->name('wishlist.index');
+Route::get('/wishlist/create', [WishlistController::class, 'createForm'])->name('createForm');
+Route::post('/wishlist/create', [WishlistController::class, 'storeWishlist'])->name('storeWishlist');
